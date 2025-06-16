@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking - Chris Transport</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Chris Transport</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="booking-content">
+    <h1>Book Your Ride</h1>
+    <form class="booking-form" action="https://formsubmit.co/kennedykariuki739@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourusername.github.io/Chris/thankyou.html">
+
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" name="pickup" required />
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" required />
+
+      <label for="date">Travel Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="type">Transport Type:</label>
+      <select id="type" name="type" required>
+        <option value="">-- Select --</option>
+        <option value="local">Local Transport</option>
+        <option value="delivery">Goods Delivery</option>
+        <option value="long-distance">Long Distance Travel</option>
+        <option value="Family Trip">Family Trip</option>
+      </select>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chris Transport. All rights reserved.</p>
+  </footer>
+</body>
+</html>
