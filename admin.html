@@ -1,0 +1,40 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contact-content">
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    <div id="orders-list"></div>
+  </div>
+
+  <script>
+    if (localStorage.getItem("isAdmin") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    // Simulated orders data (replace later with real data)
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    const listDiv = document.getElementById("orders-list");
+    if (orders.length === 0) {
+      listDiv.innerHTML = "<p>No orders found.</p>";
+    } else {
+      orders.forEach((order, index) => {
+        const el = document.createElement("div");
+        el.innerHTML = `<strong>Order ${index + 1}</strong>: ${order}`;
+        listDiv.appendChild(el);
+      });
+    }
+
+    function logout() {
+      localStorage.removeItem("isAdmin");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
